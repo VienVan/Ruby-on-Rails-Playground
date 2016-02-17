@@ -9,7 +9,7 @@
   <input type="submit" value="create">
 </form> -->
 <%= form_for(@tweet) do |f| %>
-  Title: <%= f.text_field :title %><br />
-  Content: <%= f.text_field :content %><br />
+  Title:<br /> <%= f.text_field :title %><br />
+  Content:<br /> <%= f.text_field :content %><br />
   <%= f.submit %>
 <% end %>
