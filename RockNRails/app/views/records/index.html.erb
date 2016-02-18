@@ -3,6 +3,7 @@
   <p><strong>Title: </strong><%= record.title%></p>
   <p><strong>Artist: </strong><%= record.artist%></p>
   <img src="<%= record.cover_art%>"><br />
-  <%= link_to "Show Page", record_path(record)%>
-  <a href='/records/<%= record.id %>' data-method="delete">Destroy</a>
+  <%= link_to "Show Page", record%>
+  <%= link_to "Delete", record, method: :delete%>
+
   <% end %>
