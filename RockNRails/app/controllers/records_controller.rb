@@ -12,5 +12,18 @@ class RecordsController < ApplicationController
   end
 
   def create
+    @record = Record.create(record_params)
+    @record.save
+    redirect_to "/records"
+  end
+
+  def destroy
+    Record.destroy(params[:id])
+    redirect_to "/records"
+  end
+
+  private
+  def record_params
+     params.require(:record).permit(:title, :year, :cover_art, :song_count)
   end
 end

@@ -1,3 +1,14 @@
 <h1>Add a New Record!</h1>
 <%= form_for @record do |f| %>
-<span>Title: </span>
+<span>Title: </span><br />
+<%= f.text_field :title, require: true %><br />
+<span>Artist: </span><br />
+<%= f.text_field :artist, require: true %><br />
+<span>Year: </span><br />
+<%= f.number_field :year, require: true %><br />
+<span>Cover Art: </span><br />
+<%= f.url_field :cover_art, require: true %><br />
+<span>Song Count: </span><br />
+<%= f.number_field :song_count, require: true %><br />
+<%= f.submit %>
+<% end %>
